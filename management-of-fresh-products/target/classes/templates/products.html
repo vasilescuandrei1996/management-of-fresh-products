@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Management of fresh products</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(products)}">
+        <h2>Product List</h2>
+        <table class="table table-striped">
+            <tr>
+            	<th>Image</th>
+                <th>Product Id</th>
+                <th>Name</th>
+                <th>Expiration date</th>
+                <th>Done</th>
+            </tr>
+            <tr th:each="product : ${products}">
+            	<td>  <img th:src="${product.imageUrl}" height="130" width="130"
+                   /></td>
+                <td  th:text="${product.productId}">Id</td>
+                <td th:text="${product.name}">Name</td>
+                <td th:text="${product.expirationDate}">Expiration date</td>
+				<td>
+					<form th:action="${ '/product/' + product.productId}">
+						<button>Mark as done</button>
+					</form>
+				</td>
+				</tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>
