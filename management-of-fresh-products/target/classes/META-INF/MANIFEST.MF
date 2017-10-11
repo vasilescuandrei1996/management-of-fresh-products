@@ -3,9 +3,9 @@ Implementation-Title: Management of fresh products
 Implementation-Version: 1.0.0-SNAPSHOT
 Built-By: a-c.vasilescu
 Implementation-Vendor-Id: innovation
-Build-Jdk: 1.8.0_121
-Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
- web/
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/management-o
+ f-fresh-products/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 
